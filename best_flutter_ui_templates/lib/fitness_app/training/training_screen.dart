@@ -177,14 +177,15 @@ class _TrainingScreenState extends State<TrainingScreen>
                     0.0, 30 * (1.0 - topBarAnimation!.value), 0.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: FitnessAppTheme.white.withOpacity(topBarOpacity),
+                    color: FitnessAppTheme.white
+                        .withAlpha((topBarOpacity * 255).toInt()),
                     borderRadius: const BorderRadius.only(
                       bottomLeft: Radius.circular(32.0),
                     ),
                     boxShadow: <BoxShadow>[
                       BoxShadow(
                           color: FitnessAppTheme.grey
-                              .withOpacity(0.4 * topBarOpacity),
+                              .withAlpha(((0.4 * topBarOpacity) * 255).toInt()),
                           offset: const Offset(1.1, 1.1),
                           blurRadius: 10.0),
                     ],

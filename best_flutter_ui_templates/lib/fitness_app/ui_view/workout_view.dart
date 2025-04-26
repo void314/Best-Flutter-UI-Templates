@@ -35,7 +35,8 @@ class WorkoutView extends StatelessWidget {
                       topRight: Radius.circular(68.0)),
                   boxShadow: <BoxShadow>[
                     BoxShadow(
-                        color: FitnessAppTheme.grey.withOpacity(0.6),
+                        color: FitnessAppTheme.grey
+                            .withAlpha(153), // 0.6 * 255 = 153
                         offset: Offset(1.1, 1.1),
                         blurRadius: 10.0),
                   ],
@@ -112,7 +113,7 @@ class WorkoutView extends StatelessWidget {
                                 boxShadow: <BoxShadow>[
                                   BoxShadow(
                                       color: FitnessAppTheme.nearlyBlack
-                                          .withOpacity(0.4),
+                                          .withAlpha(102), // 0.4 * 255 = 102
                                       offset: Offset(8.0, 8.0),
                                       blurRadius: 8.0),
                                 ],

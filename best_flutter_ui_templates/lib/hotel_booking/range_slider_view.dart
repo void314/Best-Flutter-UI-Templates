@@ -77,7 +77,7 @@ class _RangeSliderViewState extends State<RangeSliderView> {
               min: 0.0,
               max: 1000.0,
               activeColor: HotelAppTheme.buildLightTheme().primaryColor,
-              inactiveColor: Colors.grey.withOpacity(0.4),
+              inactiveColor: Colors.grey.withAlpha(102), // 0.4 * 255 = 102
               divisions: 1000,
               onChanged: (RangeValues values) {
                 try {
@@ -162,7 +162,7 @@ class CustomRangeThumbShape extends RangeSliderThumbShape {
               Offset(center.dx - 12, center.dy - 12)))
           ..fillType = PathFillType.evenOdd,
         Paint()
-          ..color = Colors.black.withOpacity(0.5)
+          ..color = Colors.black.withAlpha(127) // 0.5 * 255 = 127
           ..maskFilter =
               MaskFilter.blur(BlurStyle.normal, convertRadiusToSigma(8)));
 

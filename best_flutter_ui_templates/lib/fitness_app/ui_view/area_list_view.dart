@@ -123,7 +123,8 @@ class AreaView extends StatelessWidget {
                     topRight: Radius.circular(8.0)),
                 boxShadow: <BoxShadow>[
                   BoxShadow(
-                      color: FitnessAppTheme.grey.withOpacity(0.4),
+                      color: FitnessAppTheme.grey
+                          .withAlpha(102), // 0.4 * 255 = 102
                       offset: const Offset(1.1, 1.1),
                       blurRadius: 10.0),
                 ],
@@ -135,7 +136,8 @@ class AreaView extends StatelessWidget {
                   highlightColor: Colors.transparent,
                   hoverColor: Colors.transparent,
                   borderRadius: const BorderRadius.all(Radius.circular(8.0)),
-                  splashColor: FitnessAppTheme.nearlyDarkBlue.withOpacity(0.2),
+                  splashColor: FitnessAppTheme.nearlyDarkBlue
+                      .withAlpha(51), // 0.2 * 255 = 51
                   onTap: () {},
                   child: Column(
                     children: <Widget>[

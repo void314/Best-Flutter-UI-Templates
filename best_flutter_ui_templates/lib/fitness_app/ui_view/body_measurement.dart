@@ -5,7 +5,8 @@ class BodyMeasurementView extends StatelessWidget {
   final AnimationController? animationController;
   final Animation<double>? animation;
 
-  const BodyMeasurementView({Key? key, this.animationController, this.animation})
+  const BodyMeasurementView(
+      {Key? key, this.animationController, this.animation})
       : super(key: key);
 
   @override
@@ -31,7 +32,8 @@ class BodyMeasurementView extends StatelessWidget {
                       topRight: Radius.circular(68.0)),
                   boxShadow: <BoxShadow>[
                     BoxShadow(
-                        color: FitnessAppTheme.grey.withOpacity(0.2),
+                        color: FitnessAppTheme.grey
+                            .withAlpha(51), // 0.2 * 255 = 51
                         offset: Offset(1.1, 1.1),
                         blurRadius: 10.0),
                   ],
@@ -108,7 +110,7 @@ class BodyMeasurementView extends StatelessWidget {
                                       Icon(
                                         Icons.access_time,
                                         color: FitnessAppTheme.grey
-                                            .withOpacity(0.5),
+                                            .withAlpha(127), // 0.5 * 255 = 127
                                         size: 16,
                                       ),
                                       Padding(
@@ -124,7 +126,8 @@ class BodyMeasurementView extends StatelessWidget {
                                             fontSize: 14,
                                             letterSpacing: 0.0,
                                             color: FitnessAppTheme.grey
-                                                .withOpacity(0.5),
+                                                .withAlpha(
+                                                    127), // 0.5 * 255 = 127
                                           ),
                                         ),
                                       ),
@@ -193,8 +196,8 @@ class BodyMeasurementView extends StatelessWidget {
                                       fontFamily: FitnessAppTheme.fontName,
                                       fontWeight: FontWeight.w600,
                                       fontSize: 12,
-                                      color:
-                                          FitnessAppTheme.grey.withOpacity(0.5),
+                                      color: FitnessAppTheme.grey
+                                          .withAlpha(127), // 0.5 * 255 = 127
                                     ),
                                   ),
                                 ),
@@ -230,8 +233,8 @@ class BodyMeasurementView extends StatelessWidget {
                                           fontFamily: FitnessAppTheme.fontName,
                                           fontWeight: FontWeight.w600,
                                           fontSize: 12,
-                                          color: FitnessAppTheme.grey
-                                              .withOpacity(0.5),
+                                          color: FitnessAppTheme.grey.withAlpha(
+                                              127), // 0.5 * 255 = 127
                                         ),
                                       ),
                                     ),
@@ -268,8 +271,8 @@ class BodyMeasurementView extends StatelessWidget {
                                           fontFamily: FitnessAppTheme.fontName,
                                           fontWeight: FontWeight.w600,
                                           fontSize: 12,
-                                          color: FitnessAppTheme.grey
-                                              .withOpacity(0.5),
+                                          color: FitnessAppTheme.grey.withAlpha(
+                                              127), // 0.5 * 255 = 127
                                         ),
                                       ),
                                     ),

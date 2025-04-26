@@ -4,9 +4,6 @@ import 'package:best_flutter_ui_templates/fitness_app/models/tabIcon_data.dart';
 import 'package:best_flutter_ui_templates/main.dart';
 import 'package:flutter/material.dart';
 
-import '../../main.dart';
-import '../models/tabIcon_data.dart';
-
 class BottomBarView extends StatefulWidget {
   const BottomBarView(
       {Key? key, this.tabIconsList, this.changeIndex, this.addClick})
@@ -154,7 +151,7 @@ class _BottomBarViewState extends State<BottomBarView>
                         boxShadow: <BoxShadow>[
                           BoxShadow(
                               color: FitnessAppTheme.nearlyDarkBlue
-                                  .withOpacity(0.4),
+                                  .withAlpha(116), // 0.4 * 255 = 116
                               offset: const Offset(8.0, 16.0),
                               blurRadius: 16.0),
                         ],
@@ -162,7 +159,8 @@ class _BottomBarViewState extends State<BottomBarView>
                       child: Material(
                         color: Colors.transparent,
                         child: InkWell(
-                          splashColor: Colors.white.withOpacity(0.1),
+                          splashColor:
+                              Colors.white.withAlpha(26), // 0.1 * 255 = 26
                           highlightColor: Colors.transparent,
                           focusColor: Colors.transparent,
                           onTap: widget.addClick,

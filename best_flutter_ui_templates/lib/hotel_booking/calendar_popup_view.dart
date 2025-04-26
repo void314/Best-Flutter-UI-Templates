@@ -80,12 +80,14 @@ class _CalendarPopupViewState extends State<CalendarPopupView>
                     padding: const EdgeInsets.all(24.0),
                     child: Container(
                       decoration: BoxDecoration(
-                        color: HotelAppTheme.buildLightTheme().backgroundColor,
+                        color: HotelAppTheme.buildLightTheme()
+                            .scaffoldBackgroundColor,
                         borderRadius:
                             const BorderRadius.all(Radius.circular(24.0)),
                         boxShadow: <BoxShadow>[
                           BoxShadow(
-                              color: Colors.grey.withOpacity(0.2),
+                              color:
+                                  Colors.grey.withAlpha(51), // 0.2 * 255 = 51
                               offset: const Offset(4, 4),
                               blurRadius: 8.0),
                         ],
@@ -113,8 +115,8 @@ class _CalendarPopupViewState extends State<CalendarPopupView>
                                         style: TextStyle(
                                             fontWeight: FontWeight.w100,
                                             fontSize: 16,
-                                            color:
-                                                Colors.grey.withOpacity(0.8)),
+                                            color: Colors.grey.withAlpha(
+                                                204)), // 0.8 * 255 = 204
                                       ),
                                       const SizedBox(
                                         height: 4,
@@ -149,8 +151,8 @@ class _CalendarPopupViewState extends State<CalendarPopupView>
                                         style: TextStyle(
                                             fontWeight: FontWeight.w100,
                                             fontSize: 16,
-                                            color:
-                                                Colors.grey.withOpacity(0.8)),
+                                            color: Colors.grey.withAlpha(
+                                                204)), // 0.8 * 255 = 204
                                       ),
                                       const SizedBox(
                                         height: 4,
@@ -197,7 +199,8 @@ class _CalendarPopupViewState extends State<CalendarPopupView>
                                       Radius.circular(24.0)),
                                   boxShadow: <BoxShadow>[
                                     BoxShadow(
-                                      color: Colors.grey.withOpacity(0.6),
+                                      color: Colors.grey
+                                          .withAlpha(153), // 0.6 * 255 = 153
                                       blurRadius: 8,
                                       offset: const Offset(4, 4),
                                     ),
@@ -214,7 +217,8 @@ class _CalendarPopupViewState extends State<CalendarPopupView>
                                         // animationController.reverse().then((f) {
 
                                         // });
-                                        widget.onApplyClick!(startDate!, endDate!);
+                                        widget.onApplyClick!(
+                                            startDate!, endDate!);
                                         Navigator.pop(context);
                                       } catch (_) {}
                                     },
